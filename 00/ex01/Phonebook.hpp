@@ -4,49 +4,57 @@
 
 #include <iostream>
 #include <string>
+#include "Contract.hpp"
+
+#define MAX_CONTACTS 8
 
 class PhoneBook
 {
 private:
-	Contract contract[8];
+	Contract contract[MAX_CONTACTS];
+	int		amount;
 public:
+	PhoneBook::PhoneBook()
+	{
+		for (int i = 0; i < MAX_CONTACTS; i++)
+		{
+			this->contract[i] = (Contract)1;
+		}
+		
+	};
+	~PhoneBook();
+	void	addContact(
+		std::string first_name,
+		std::string last_name,
+		std::string nickname,
+		std::string phone_number,
+		std::string darkest_secret
+	);
+	void	setContract(Contract contract);
+	void	searchContact(std::string name);
+	void	removeContact(std::string name);
+	void	printContacts();
+};
+
+
+void	PhoneBook::setContract(Contract contract)
+{
 	
-	~PhoneBook
-();
-};
-
-PhoneBook::PhoneBook(/* args */)
-{
 }
 
-PhoneBook::~PhoneBook()
+void PhoneBook::addContact(
+		std::string first_name,
+		std::string last_name,
+		std::string nickname,
+		std::string phone_number,
+		std::string darkest_secret
+	)
 {
+	if (this->contract == NULL)
+	{
+		
+	}
+	std::cout << "Phonebook is full" << std::endl;
 }
-
-class Contract
-{
-private:
-	std::string first_name;
-	std::string last_name;
-	std::string nick_name;
-	std::string phone_number;
-	std::string darkest_secret;
-public:
-	Contract(std::string first_name,std::string last_name,
-		std::string nick_name, std::string phone_number, std::string darkest_secret)
-		: first_name(first_name)
-		, last_name(last_name)
-		, nick_name(nick_name)
-		, phone_number(phone_number)
-		, darkest_secret(darkest_secret)
-		{}
-};
-
-
-Contract::~Contract()
-{
-}
-
-
 
 #endif
