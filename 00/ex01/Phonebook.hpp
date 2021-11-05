@@ -4,24 +4,18 @@
 
 #include <iostream>
 #include <string>
-#include "Contract.hpp"
+#include "Contact.hpp"
 
 #define MAX_CONTACTS 8
 
 class PhoneBook
 {
 private:
-	Contract contract[MAX_CONTACTS];
+	Contact contact[MAX_CONTACTS];
 	int		amount;
+	int		index;
 public:
-	PhoneBook::PhoneBook()
-	{
-		for (int i = 0; i < MAX_CONTACTS; i++)
-		{
-			this->contract[i] = (Contract)1;
-		}
-		
-	};
+	PhoneBook();
 	~PhoneBook();
 	void	addContact(
 		std::string first_name,
@@ -30,17 +24,10 @@ public:
 		std::string phone_number,
 		std::string darkest_secret
 	);
-	void	setContract(Contract contract);
-	void	searchContact(std::string name);
+	void	searchContact();
 	void	removeContact(std::string name);
 	void	printContacts();
 };
-
-
-void	PhoneBook::setContract(Contract contract)
-{
-	
-}
 
 void PhoneBook::addContact(
 		std::string first_name,
@@ -50,11 +37,69 @@ void PhoneBook::addContact(
 		std::string darkest_secret
 	)
 {
-	if (this->contract == NULL)
+	if (first_name == "")
 	{
-		
+		std::cout << "FirstName must be non-blank" << std::endl;
+		return ;
 	}
-	std::cout << "Phonebook is full" << std::endl;
+	if (last_name == "")
+	{
+		std::cout << "LastName must be non-blank" << std::endl;
+		return ;
+	}
+	if (nickname == "")
+	{
+		std::cout << "NickName must be non-blank" << std::endl;
+		return ;
+	}
+	if (phone_number == "")
+	{
+		std::cout << "PhoneNumber must be non-blank" << std::endl;
+		return ;
+	}
+	if (darkest_secret == "")
+	{
+		std::cout << "DarkestSecret must be non-blank" << std::endl;
+		return ;
+	}
+
+	if (this->amount == 7)
+	{
+		std::cout << "Phonebook is full" << std::endl;
+		std::cout << "Delete first contact" << std::endl;
+		this->index /= 7;
+		this->contact[index] = Contact(first_name, last_name, nickname, phone_number, darkest_secret);
+		index++;
+		return ;
+	}
+	this->contact[index] = Contact(first_name, last_name, nickname, phone_number, darkest_secret);
+	index++;
+	amount++;
+	std::cout << "Add Contact in the Phonebook!!" << std::endl;
+	return ;
 }
+
+void	PhoneBook::searchContact()
+{
+	size_t len;
+	std::string first_name;
+	
+	if (this->amount == 0)
+	{
+		std::cout << "Contact is 0." << std::endl;
+		return ;
+	}
+	
+	for (int i = 0; i < this->amount; i++)
+	{
+		first_name = this->contact[i].getFirstName();
+		if (first_name.length() > 10)
+		{
+			std::substr(first_name)
+		}
+	}
+	
+}
+
 
 #endif
