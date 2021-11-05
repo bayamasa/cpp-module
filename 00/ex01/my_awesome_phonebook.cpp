@@ -6,12 +6,11 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:49:03 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/05 16:02:00 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/05 17:23:57 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "my_awesome_phonebook.hpp"
-
 
 void execAdd(PhoneBook phoneBook)
 {
@@ -29,16 +28,15 @@ void execAdd(PhoneBook phoneBook)
 	phoneBook.addContact(first_name, last_name, nick_name, phone_number, darkest_secret);	
 }
 
-void execSearch(PhoneBook phonebook)
+void execSearch(PhoneBook phoneBook)
 {
-	
+	phoneBook.searchContact();
 }
 
 int main(void)
 {
 	int choice;
 	PhoneBook phonebook;
-	
 	std::cin >> choice;
 	std::cout << "Welcome to My Awesome Phonebook!!" << std::endl;
 	std::cout << "Options 1:ADD, 2:SEARCH, 3:EXIT" << std::endl;

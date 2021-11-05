@@ -1,5 +1,5 @@
-#ifndef CONTRACT_HPP
-#define CONTRACT_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 #include <string>
 
@@ -21,6 +21,7 @@ public:
 		, phone_number(phone_number)
 		, darkest_secret(darkest_secret)
 		{}
+	~Contact();
 	std::string getFirstName();
 	std::string getLastName();
 	std::string getNickName();
@@ -34,30 +35,5 @@ public:
 		std::string darkest_secret
 	);
 };
-
-Contact::~Contact()
-{
-}
-
-std::string Contact::getFirstName()
-{
-	return this->first_name;
-}
-std::string Contact::getLastName()
-{
-	return this->last_name;
-}
-std::string Contact::getNickName()
-{
-	return this->nick_name;
-}
-std::string Contact::getPhoneNumber()
-{
-	return this->phone_number;
-}
-std::string Contact::getDarkestSecret()
-{
-	return this->darkest_secret;
-}
 
 #endif
