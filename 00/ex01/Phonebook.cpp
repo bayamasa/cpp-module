@@ -2,7 +2,8 @@
 
 PhoneBook::PhoneBook()
 {
-
+	this->index = 0;
+	this->amount = 0;
 }
 
 PhoneBook::~PhoneBook()
@@ -44,11 +45,12 @@ void PhoneBook::addContact(
 		return ;
 	}
 
-	if (this->amount == 7)
+	if (this->amount == 8)
 	{
 		std::cout << "Phonebook is full" << std::endl;
-		std::cout << "Delete first contact" << std::endl;
-		this->index /= 7;
+		std::cout << "Substitute contact index: " << index + 1 << std::endl;
+		if (index == 8)
+			this->index = 0;
 		this->contact[index] = Contact(first_name, last_name, nickname, phone_number, darkest_secret);
 		index++;
 		return ;
@@ -57,16 +59,18 @@ void PhoneBook::addContact(
 	index++;
 	amount++;
 	std::cout << "Add Contact in the Phonebook!!" << std::endl;
+	std::cout << std::endl;
 	return ;
 }
 
 void	PhoneBook::searchContact()
 {
-	size_t output_maxlen;
+	size_t maxlen;
 	std::string first_name;
+	std::string last_name;
+	std::string nick_name;
 	
-	output_maxlen = 10;
-
+	maxlen = 10;
 	if (this->amount == 0)
 	{
 		std::cout << "Contact is 0." << std::endl;
@@ -75,12 +79,24 @@ void	PhoneBook::searchContact()
 	
 	for (int i = 0; i < this->amount; i++)
 	{
+		std::cout << "|" << std::setw(maxlen) << i + 1 << "|" << std::endl;
 		first_name = this->contact[i].getFirstName();
-		if (first_name.length() > output_maxlen)
-		{
+		if (first_name.length() > maxlen)
 			std::cout << "|" << first_name.substr(0, 9) << "." << "|" << std::endl;
-		}
-		std::cout << std::setw(12) << std::setfill(' ')<< "|" << first_name << "|" << std::endl;
+		else
+			std::cout << "|" << std::setw(maxlen) << first_name << "|" << std::endl;
+		
+		last_name = this->contact[i].getFirstName();
+		if (first_name.length() > maxlen)
+			std::cout << "|" << first_name.substr(0, 9) << "." << "|" << std::endl;
+		else
+			std::cout << "|" << std::setw(maxlen) << first_name << "|" << std::endl;
+			last_name = this->contact[i].getFirstName();
+		nick_name = this->contact[i].getNickName();
+		if (nick_name.length() > maxlen)
+			std::cout << "|" << nick_name.substr(0, 9) << "." << "|" << std::endl;
+		else
+			std::cout << "|" << std::setw(maxlen) << nick_name << "|" << std::endl;
 	}
 }
 

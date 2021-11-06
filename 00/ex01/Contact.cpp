@@ -2,7 +2,6 @@
 
 Contact::Contact()
 {
-
 }
 
 Contact::~Contact()
