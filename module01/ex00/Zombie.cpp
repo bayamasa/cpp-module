@@ -10,13 +10,7 @@ Zombie::~Zombie()
 	std::cout << this->name << " is elimineted..." << std::endl;
 }
 
-void Zombie::announce(std::string name)
+void Zombie::announce(void)
 {
 	std::cout << this->name << " BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-
-void randomChump(std::string name)
-{
-	
 }
