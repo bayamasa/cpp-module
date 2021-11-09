@@ -6,7 +6,7 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by ncolomer          #+#    #+#              #
-#    Updated: 2021/11/09 20:26:04 by mhirabay         ###   ########.fr        #
+#    Updated: 2021/11/09 22:01:34 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -std=c++98 -pedantic -I. -g -fsanitize=undefined -fsanitize=integer
+CXXFLAGS		= -Wall -Wextra -Werror -std=c++98 -pedantic -I. 
 
 all:			$(NAME)
 
