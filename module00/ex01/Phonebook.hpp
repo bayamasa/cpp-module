@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <sstream>
 #include "Contact.hpp"
 
 #define MAX_CONTACTS 8
@@ -14,6 +15,8 @@ private:
 	Contact contact[MAX_CONTACTS];
 	int		amount;
 	int		index;
+	void printAttr(std::string attr, size_t maxlen);
+	void printAllAttr(int index);
 public:
 	PhoneBook();
 	~PhoneBook();

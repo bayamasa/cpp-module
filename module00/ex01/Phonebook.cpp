@@ -19,32 +19,6 @@ void PhoneBook::addContact(
 		std::string darkest_secret
 	)
 {
-	if (first_name == "")
-	{
-		std::cout << "FirstName must be non-blank" << std::endl;
-		return ;
-	}
-	if (last_name == "")
-	{
-		std::cout << "LastName must be non-blank" << std::endl;
-		return ;
-	}
-	if (nickname == "")
-	{
-		std::cout << "NickName must be non-blank" << std::endl;
-		return ;
-	}
-	if (phone_number == "")
-	{
-		std::cout << "PhoneNumber must be non-blank" << std::endl;
-		return ;
-	}
-	if (darkest_secret == "")
-	{
-		std::cout << "DarkestSecret must be non-blank" << std::endl;
-		return ;
-	}
-
 	if (this->amount == 8)
 	{
 		std::cout << "Phonebook is full" << std::endl;
@@ -63,40 +37,63 @@ void PhoneBook::addContact(
 	return ;
 }
 
+
 void	PhoneBook::searchContact()
 {
-	size_t maxlen;
+	size_t maxlen = 10;
+	int index;
 	std::string first_name;
 	std::string last_name;
 	std::string nick_name;
 	
-	maxlen = 10;
+
 	if (this->amount == 0)
 	{
 		std::cout << "Contact is 0." << std::endl;
 		return ;
 	}
+	std::cout << "|" << "index     "  << std::ends;
+	std::cout << "|"  << "first name" << std::ends;
+	std::cout << "|"  << "last name " << std::ends;
+	std::cout << "|" << "nickname  " << "|" << std::endl;
 	
 	for (int i = 0; i < this->amount; i++)
 	{
-		std::cout << "|" << std::setw(maxlen) << i + 1 << "|" << std::endl;
-		first_name = this->contact[i].getFirstName();
-		if (first_name.length() > maxlen)
-			std::cout << "|" << first_name.substr(0, 9) << "." << "|" << std::endl;
-		else
-			std::cout << "|" << std::setw(maxlen) << first_name << "|" << std::endl;
-		
-		last_name = this->contact[i].getFirstName();
-		if (first_name.length() > maxlen)
-			std::cout << "|" << first_name.substr(0, 9) << "." << "|" << std::endl;
-		else
-			std::cout << "|" << std::setw(maxlen) << first_name << "|" << std::endl;
-			last_name = this->contact[i].getFirstName();
-		nick_name = this->contact[i].getNickName();
-		if (nick_name.length() > maxlen)
-			std::cout << "|" << nick_name.substr(0, 9) << "." << "|" << std::endl;
-		else
-			std::cout << "|" << std::setw(maxlen) << nick_name << "|" << std::endl;
+		std::cout << "|" << std::setw(maxlen) << i + 1 << std::ends;
+		printAttr(this->contact[i].getFirstName(), maxlen);
+		printAttr(this->contact[i].getLastName(), maxlen);
+		printAttr(this->contact[i].getNickName(), maxlen);
+		std::cout << "|" << std::endl;
 	}
+	std::cout << "Insert search index" << std::endl;
+	std::cin >> index;
+	// 小数点でcrashしないか見る
+	if (std::cin.fail())
+	{
+		std::cout << "Invalid Argument" << std::endl;
+		exit(1);
+	}
+	if (index > 0 && index <= this->amount)
+		printAllAttr(index - 1);
+	else
+		std::cout << "Input index has no contact." << std::endl;
 }
 
+void PhoneBook::printAttr(std::string attr, size_t maxlen)
+{
+	if (attr.length() > maxlen)
+		std::cout << "|" << attr.substr(0, 9) << "." << std::ends;
+	else
+		std::cout << "|" << std::setw(maxlen) << attr << std::ends;
+}
+
+void PhoneBook::printAllAttr(int index)
+{
+	std::cout << "-----CONTACT_INFO-----" << std::endl;
+	std::cout << "first_name: " << this->contact[index].getFirstName() << std::endl;
+	std::cout << "last_name: " << this->contact[index].getLastName() << std::endl;
+	std::cout << "nick_name: " << this->contact[index].getNickName() << std::endl;
+	std::cout << "phone_number: " << this->contact[index].getPhoneNumber() << std::endl;
+	std::cout << "darkest_secret: " << this->contact[index].getDarkestSecret() << std::endl;
+	std::cout << "----------------------" << std::endl;
+}

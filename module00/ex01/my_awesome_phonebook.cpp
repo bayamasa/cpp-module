@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:49:03 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/06 16:15:07 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/09 09:34:26 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ void execSearch(PhoneBook &phoneBook)
 
 void execExit()
 {
-	std::cout << "Confirm exit" << std::endl;
-	std::cout << "Delete all Phonebook. Thank you." << std::endl;	
+	std::cout << "Exit confirmed" << std::endl;
+	std::cout << "Delete all Contacts. Process termineted..." << std::endl;	
 }
 
 int main(void)
