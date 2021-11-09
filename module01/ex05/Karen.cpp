@@ -2,7 +2,6 @@
 
 Karen::Karen(/* args */)
 {
-	pfunc[0] = &Karen::debug;
 }
 
 Karen::~Karen()
@@ -31,11 +30,17 @@ void Karen::error(void)
 
 void Karen::complain(std::string level)
 {
-
-// 	void (* const FuncPtrArray[])(void) = {
-//     this.debug,
-//     this->info(),
-//     warning(),
-// };
+	// enum anger_level { 
+	// 	debug = std::string("debug"), 
+	// 	info, 
+	// 	warn, error};
+	// anger_level lv = level;
+	std::string str[] = 
+	{
+		"debug", "info", "warn", "error"
+	};
 
 }
+
+// 方針 配列の何番目にあるのかどうかを判定するような機能を探してくる
+// enumと文字列を結びつける

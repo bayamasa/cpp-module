@@ -8,14 +8,7 @@ private:
 	void info(void);
 	void warning(void);
 	void error(void);
-	typedef void (Karen::*funct)(void);
-	funct pfunc[3];
-	typedef void (*funcPtr)(void);	// funcptr[3] = {
-	// 	debug,
-	// 	info,
-	// 	warning,
-	// 	error,
-	// };
+	typedef void (Karen::*action)(void);
 public:
 	Karen(/* args */);
 	~Karen();
