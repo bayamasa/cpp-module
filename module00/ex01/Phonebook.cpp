@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 20:04:28 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/09 21:22:37 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/09 22:59:33 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,10 @@ void	PhoneBook::searchContact()
 		std::cout << "Contact is 0. ADD contact" << std::endl;
 		return ;
 	}
-	std::cout << "|" << "index     "  << std::ends;
-	std::cout << "|"  << "first name" << std::ends;
-	std::cout << "|"  << "last name " << std::ends;
-	std::cout << "|" << "nickname  " << "|" << std::endl;
+	std::cout << "|" << std::setw(maxlen) << "index" << std::ends;
+	std::cout << "|" << std::setw(maxlen) << "first name" << std::ends;
+	std::cout << "|" << std::setw(maxlen) << "last name" << std::ends;
+	std::cout << "|" << std::setw(maxlen)  << "nickname" << "|" << std::endl;
 	
 	for (int i = 0; i < this->amount; i++)
 	{
