@@ -10,3 +10,4 @@ int main(void)
 	std::cout.width(3);
 	std::cout << hello << std::endl;	
 }
+
