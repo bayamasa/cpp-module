@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 20:16:40 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/09 20:16:41 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/09 21:56:28 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
-#include <sstream>
 #include "Contact.hpp"
 
 #define MAX_CONTACTS 8
@@ -43,9 +42,5 @@ public:
 	void	removeContact(std::string name);
 	void	printContacts();
 };
-
-
-
-
 
 #endif

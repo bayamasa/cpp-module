@@ -6,12 +6,11 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:49:03 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/09 21:34:47 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/09 21:59:47 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "my_awesome_phonebook.hpp"
-
 
 std::string createInput(std::string target)
 {
@@ -28,7 +27,7 @@ std::string createInput(std::string target)
 		}
 		if(res == "")
 		{
-			std::cout << "Forbidden only blank." << std::endl;
+			std::cout << "Please input something" << std::endl;
 			continue;
 		}
 		return res;
