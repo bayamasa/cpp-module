@@ -43,4 +43,6 @@ int main(int argc, char *argv[])
 			ofs << line << std::endl;
 		}
 	}
+	ifs.close();
+	ofs.close();
 } 
