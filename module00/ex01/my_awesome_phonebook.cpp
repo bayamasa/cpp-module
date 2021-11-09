@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:49:03 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/09 09:34:26 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/09 21:34:47 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,23 @@
 std::string createInput(std::string target)
 {
 	std::string res;
-	std::cout << "Input " << target << ": " << std::ends;
-	std::cin >> res;
-	if (std::cin.fail())
+	while (1)
 	{
-		std::cout << std::endl;
-		std::cout << target << " is Invalid argument" << std::endl;
-		std::exit(0);
+		std::cout << "Input " << target << ": " << std::ends;
+		std::getline(std::cin, res);
+		if (std::cin.fail())
+		{
+			std::cout << std::endl;
+			std::cout << target << " is Invalid argument" << std::endl;
+			std::exit(1);
+		}
+		if(res == "")
+		{
+			std::cout << "Forbidden only blank." << std::endl;
+			continue;
+		}
+		return res;
 	}
-	// std::cin.clear();
-	// std::clearerr(std::cin);
-	return res;
 }
 
 void execAdd(PhoneBook &phoneBook)
@@ -48,38 +54,30 @@ void execSearch(PhoneBook &phoneBook)
 void execExit()
 {
 	std::cout << "Exit confirmed" << std::endl;
-	std::cout << "Delete all Contacts. Process termineted..." << std::endl;	
+	std::cout << "Delete all Contacts. Process termineted..." << std::endl;
+	std::exit(0);
 }
 
 int main(void)
 {
 	std::string input;
-	int choice;
 	PhoneBook phonebook;
+	std::cout << "Welcome to My Awesome Phonebook!!" << std::endl;
 	while (1)
 	{	
-		std::cout << "Welcome to My Awesome Phonebook!!" << std::endl;
-		std::cout << "Options 1:ADD, 2:SEARCH, 3:EXIT" << std::endl;
-		std::cin >> choice;
+		std::cout << "Options ADD, SEARCH, EXIT" << std::endl;
+		std::getline(std::cin, input);
+		
 		if (std::cin.fail())
 		{
 			std::cout << "Invalid Argument" << std::endl;
-			exit(1);
+			std::exit(1);
 		}
-		switch (choice)
-		{
-		case ADD:
+		if(input == "ADD")
 			execAdd(phonebook);
-			break;
-		case SEARCH:
+		if(input == "SEARCH")
 			execSearch(phonebook);
-			break;
-		case EXIT:
+		if (input == "EXIT")
 			execExit();
-			exit(0);
-		default:
-			std::cout << "Invalid Option. Exit program." << std::endl;
-			exit(0);
-		}
 	}
 }

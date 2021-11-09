@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 16:09:53 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/10/22 17:33:47 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/09 21:46:42 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int main(int argc, const char *argv[])
 	}
 	for (int i = 1; i < argc; i++)
 	{
-		
 		int j = 0;
 		while (argv[i][j] != '\0')
 		{

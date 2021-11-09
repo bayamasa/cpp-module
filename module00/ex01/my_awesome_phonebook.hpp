@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 20:04:24 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/09 20:04:25 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/09 21:39:24 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,5 @@
 # include <string.h>
 # include <cstring>
 # include "Phonebook.hpp"
-
-# define ADD 1
-# define SEARCH 2
-# define EXIT 3
 
 #endif

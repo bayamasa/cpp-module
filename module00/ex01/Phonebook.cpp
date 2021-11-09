@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 20:04:28 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/09 20:05:13 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/09 21:22:37 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void PhoneBook::addContact(
 void	PhoneBook::searchContact()
 {
 	size_t maxlen = 10;
-	int index;
+	std::string input;
 	std::string first_name;
 	std::string last_name;
 	std::string nick_name;
@@ -58,7 +58,7 @@ void	PhoneBook::searchContact()
 
 	if (this->amount == 0)
 	{
-		std::cout << "Contact is 0." << std::endl;
+		std::cout << "Contact is 0. ADD contact" << std::endl;
 		return ;
 	}
 	std::cout << "|" << "index     "  << std::ends;
@@ -75,17 +75,25 @@ void	PhoneBook::searchContact()
 		std::cout << "|" << std::endl;
 	}
 	std::cout << "Insert search index" << std::endl;
-	std::cin >> index;
-	// 小数点でcrashしないか見る
+	std::getline(std::cin, input);
 	if (std::cin.fail())
 	{
 		std::cout << "Invalid Argument" << std::endl;
 		exit(1);
 	}
-	if (index > 0 && index <= this->amount)
-		printAllAttr(index - 1);
+	if (input.length() == 1)
+	{
+		int index = std::stoi(input);
+	
+		if (index > 0 && index <= this->amount)
+			printAllAttr(index - 1);
+		else
+			std::cout << "Input index has no contact" << std::endl;
+	}
 	else
-		std::cout << "Input index has no contact." << std::endl;
+	{
+		std::cout << "Invalid Argument" << std::endl;
+	}
 }
 
 void PhoneBook::printAttr(std::string attr, size_t maxlen)
