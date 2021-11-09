@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 20:04:02 by mhirabay          #+#    #+#             */
+/*   Updated: 2021/11/09 20:04:03 by mhirabay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
@@ -27,13 +39,6 @@ public:
 	std::string getNickName();
 	std::string getPhoneNumber();
 	std::string getDarkestSecret();
-	void		setContact(
-		std::string first_name,
-		std::string last_name,
-		std::string nick_name,
-		std::string phone_number,
-		std::string darkest_secret
-	);
 };
 
 #endif

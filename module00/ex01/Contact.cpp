@@ -1,12 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 20:03:58 by mhirabay          #+#    #+#             */
+/*   Updated: 2021/11/09 20:03:59 by mhirabay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.hpp"
 
-Contact::Contact()
-{
-}
+Contact::Contact(){}
 
-Contact::~Contact()
-{
-}
+Contact::~Contact(){}
 
 std::string Contact::getFirstName()
 {

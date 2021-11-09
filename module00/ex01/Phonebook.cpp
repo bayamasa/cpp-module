@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 20:04:28 by mhirabay          #+#    #+#             */
+/*   Updated: 2021/11/09 20:05:13 by mhirabay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Phonebook.hpp"
 
 PhoneBook::PhoneBook()
@@ -6,10 +18,7 @@ PhoneBook::PhoneBook()
 	this->amount = 0;
 }
 
-PhoneBook::~PhoneBook()
-{
-
-}
+PhoneBook::~PhoneBook(){}
 
 void PhoneBook::addContact(
 		std::string first_name,
