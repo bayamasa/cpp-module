@@ -10,6 +10,20 @@ Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
 }
+Fixed::Fixed(const int i)
+{
+	std::cout << "Int constructor called" << std::endl;
+	// fraction bit は8bit存在するので、
+	// rawbitの下位8bitは整数部では扱わない。
+	raw_bits = i << fraction_bits;
+}
+
+Fixed::Fixed(const float f)
+{
+	std::cout << "Float constructor called" << std::endl;
+	// f << fractionbits はfloatの使用上、使用不可
+	raw_bits = roundf(f * (1 << fraction_bits));
+}
 
 Fixed::Fixed(const Fixed &obj)
 {
@@ -19,7 +33,6 @@ Fixed::Fixed(const Fixed &obj)
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return this->raw_bits;
 }
 
@@ -35,4 +48,20 @@ Fixed &Fixed::operator=(const Fixed &other)
 		setRawBits(other.getRawBits());
 	}
 	return *this;
+}
+
+std::ostream &operator<<(std::ostream &os, const Fixed &fixed)
+{
+	os << fixed.toFloat();
+	return os;
+}
+
+int Fixed::toInt() const
+{
+	return (raw_bits >> fraction_bits);
+}
+
+float Fixed::toFloat() const
+{
+	return (float)raw_bits / (1 << fraction_bits);
 }
