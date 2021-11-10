@@ -45,6 +45,17 @@ Fixed Fixed::operator+(const Fixed &rraw_bits) const {
 	return (Fixed(toFloat() + rraw_bits.toFloat()));
 }	
 
+Fixed Fixed::operator-(const Fixed &rraw_bits) const {
+	return (Fixed(toFloat() - rraw_bits.toFloat()));
+}
+
+Fixed Fixed::operator*(const Fixed &rraw_bits) const {
+	return (Fixed(toFloat() * rraw_bits.toFloat()));
+}
+
+Fixed Fixed::operator/(const Fixed &rraw_bits) const {
+	return (Fixed(toFloat() / rraw_bits.toFloat()));
+}
 
 Fixed &Fixed::operator=(const Fixed &other)
 {

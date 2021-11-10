@@ -34,15 +34,10 @@ public:
 
 	Fixed &operator=(const Fixed &other);
 	Fixed operator+(const Fixed &rraw_bits) const; 
-	Fixed operator-(const Fixed &rraw_bits) const {
-		return (getRawBits() - rraw_bits.getRawBits());
-	}
-	Fixed operator*(const Fixed &rraw_bits) const {
-		return (getRawBits() * rraw_bits.getRawBits());
-	}
-	Fixed operator/(const Fixed &rraw_bits) const {
-		return (getRawBits() / rraw_bits.getRawBits());
-	}
+	Fixed operator-(const Fixed &rraw_bits) const;
+	Fixed operator*(const Fixed &rraw_bits) const;
+	Fixed operator/(const Fixed &rraw_bits) const; 
+
 	bool operator<(const Fixed& rraw_bits){  
 		return raw_bits < rraw_bits.getRawBits();
 	}
