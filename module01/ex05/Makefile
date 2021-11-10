@@ -6,16 +6,16 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by ncolomer          #+#    #+#              #
-#    Updated: 2021/11/09 16:46:44 by mhirabay         ###   ########.fr        #
+#    Updated: 2021/11/10 09:30:10 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp
+SRCS			= main.cpp Karen.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98 -pedantic
+CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98 -pedantic -g -fsanitize=undefined
 
 NAME			= a.out
 
