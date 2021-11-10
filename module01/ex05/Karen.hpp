@@ -1,3 +1,6 @@
+#ifndef KAREN_HPP
+# define KAREN_HPP
+
 #include <string>
 #include <iostream>
 
@@ -17,3 +20,4 @@ public:
 	void complain(std::string level);
 };
 
+#endif

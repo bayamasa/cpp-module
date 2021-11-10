@@ -6,9 +6,12 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 16:32:31 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/08 09:50:23 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/10 15:55:56 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include <string>
 #include <iostream>
@@ -28,3 +31,5 @@ public:
 
 Zombie* newZombie(std::string name);
 void randomChump(std::string name);
+
+#endif

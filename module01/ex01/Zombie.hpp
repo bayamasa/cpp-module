@@ -6,9 +6,12 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 16:32:31 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/08 15:32:44 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/10 15:56:22 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include <string>
 #include <iostream>
@@ -29,3 +32,5 @@ public:
 };
 
 Zombie *zombieHorde(int N, std::string name);
+
+#endif
