@@ -54,6 +54,11 @@ Fixed Fixed::operator*(const Fixed &rraw_bits) const {
 }
 
 Fixed Fixed::operator/(const Fixed &rraw_bits) const {
+	if (rraw_bits.toFloat() == 0)
+	{
+		std::cout << "Forbidden divided by 0" << std::endl;
+		exit(1);
+	}
 	return (Fixed(toFloat() / rraw_bits.toFloat()));
 }
 
