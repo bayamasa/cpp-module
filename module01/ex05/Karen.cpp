@@ -1,12 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Karen.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/11 21:59:57 by mhirabay          #+#    #+#             */
+/*   Updated: 2021/11/11 21:59:58 by mhirabay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Karen.hpp"
 
-Karen::Karen(/* args */)
-{
-}
+Karen::Karen(){}
 
-Karen::~Karen()
-{
-}
+Karen::~Karen(){}
 
 void Karen::debug(void)
 {
@@ -30,16 +38,9 @@ void Karen::error(void)
 
 void Karen::complain(std::string level)
 {
-	std::string str[] = 
-	{
-		"debug", "info", "warning", "error"
-	};
+	std::string str[] = {"debug", "info", "warning", "error"};
 	action actionfunc[] = { &Karen::debug, &Karen::info, &Karen::warning, &Karen::error };
+	
 	for (int i = 0; i < 4; i++)
-	{
 		(level == str[i] ? (this->*actionfunc[i])() : (void)NULL);
-	}
 }
-
-// 方針 配列の何番目にあるのかどうかを判定するような機能を探してくる
-// enumと文字列を結びつける
