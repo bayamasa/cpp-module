@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 16:32:31 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/10 15:56:22 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/11 21:10:08 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <string>
 #include <iostream>
-#include <cstdlib>
 #include <ctime>
 #include <sstream>
 
