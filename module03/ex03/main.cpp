@@ -3,82 +3,77 @@
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 
+void execClap(ClapTrap &clap)
+{
+	clap.attack("enemy");
+	clap.takeDamage(99999);
+	clap.beRepaired(100);
+}
+
+void execScav(ScavTrap &scav)
+{
+	scav.attack("enemy");
+	scav.takeDamage(50000000);
+	scav.beRepaired(99999);
+	scav.guardGate();
+}
+
+void execFrag(FragTrap &trap)
+{
+	trap.attack("enemy");
+	trap.takeDamage(100);
+	trap.beRepaired(80);
+	trap.highFivesGuys();
+}
+
+void execDiamond(DiamondTrap &trap)
+{
+	trap.attack("enemy");
+	trap.takeDamage(100);
+	trap.beRepaired(80);
+	trap.whoAmI();
+}
+
 int main(void)
 {
-	ClapTrap a("OptimusPrime");
+	std::cout << "============ClapTrap=============" << std::endl;
+	ClapTrap a = ClapTrap("a");
 	ClapTrap b(a);
 	ClapTrap c;
 	c = b;
-	a.attack("MegaTron");
-	a.takeDamage(100);
-	a.beRepaired(80);
+	execClap(a);
+	execClap(b);
+	execClap(c);
 
-	b.attack("GigaTron");
-	b.takeDamage(100);
-	b.beRepaired(80);
+	std::cout << "============ScavTrap=============" << std::endl;
+	ScavTrap d = ScavTrap("d");
+	ScavTrap e(d);
+	ScavTrap f;
+	f = e;
+	execScav(d);
+	execScav(e);
+	execScav(f);
 
-	c.attack("IkeaTron");
-	c.takeDamage(100);
-	c.beRepaired(80);
+	std::cout << "============FragTrap=============" << std::endl;
+	FragTrap g = FragTrap("d");
+	FragTrap h(g);
+	FragTrap i;
+	i = h;
 
-	ScavTrap aa("OptiProHumusPrimeBeef");
-	ScavTrap bb(aa);
-	ScavTrap cc;
-	cc = bb;
+	execFrag(g);
+	execFrag(h);
+	execFrag(i);
 
-	aa.attack("MoguTron");
-	aa.takeDamage(100);
-	aa.beRepaired(80);
-	aa.guardGate();
+	std::cout << "============DiamondTrap=============" << std::endl;
+	DiamondTrap j = DiamondTrap("j");
+	DiamondTrap k(j);
+	DiamondTrap l;
+	l = k;
 
-	bb.attack("DjiganTron");
-	bb.takeDamage(100);
-	bb.beRepaired(80);
-	bb.guardGate();
+	execDiamond(j);
+	execDiamond(k);
+	execDiamond(l);
+	std::cout << "=================================" << std::endl;
 
-	cc.attack("IkeaStul");
-	cc.takeDamage(100);
-	cc.beRepaired(80);
-	cc.guardGate();
-
-	FragTrap aaa("Chertopoloch");
-	FragTrap bbb(aaa);
-	FragTrap ccc;
-	ccc = bbb;
-
-	aaa.attack("Megataburetka");
-	aaa.takeDamage(100);
-	aaa.beRepaired(80);
-	aaa.highFivesGuys();
-
-	bbb.attack("Metrandir");
-	bbb.takeDamage(100);
-	bbb.beRepaired(80);
-	bbb.highFivesGuys();
-
-	ccc.attack("TomReadle");
-	ccc.takeDamage(100);
-	ccc.beRepaired(80);
-	ccc.highFivesGuys();
-
-	DiamondTrap aaaa("Pelmeshka");
-	DiamondTrap bbbb(aaaa);
-	DiamondTrap cccc;
-	cccc = bbbb;
-
-	aaaa.attack("Megatabutilka");
-	aaaa.takeDamage(100);
-	aaaa.beRepaired(80);
-	aaaa.whoAmI();
-
-	bbbb.attack("Metrandirectory");
-	bbbb.takeDamage(100);
-	bbbb.beRepaired(80);
-	bbbb.whoAmI();
-
-	cccc.attack("TomReadandWritele");
-	cccc.takeDamage(100);
-	cccc.beRepaired(80);
-	cccc.whoAmI();
 	return (0);
 }
