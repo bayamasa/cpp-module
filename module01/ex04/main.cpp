@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/11 21:44:07 by mhirabay          #+#    #+#             */
+/*   Updated: 2021/11/11 21:51:18 by mhirabay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <fstream>
 #include <iostream>
 
@@ -25,7 +37,6 @@ int main(int argc, char *argv[])
 	}
 
 	std::ifstream ifs(filename);
-	
 	if (ifs.fail())
 	{
 		std::cout << "Faild to open input file" << std::endl;
@@ -41,13 +52,16 @@ int main(int argc, char *argv[])
 
 	std::string line;
 	while (std::getline(ifs, line))
-	{
+	{	
+		std::string::npos;
 		ssize_t index = line.find(orig);
 		if (index >= 0)
 			ofs << line.erase(index, orig.length()).insert(index, repl) << std::endl;
 		else
 			ofs << line << std::endl;
 	}
+	
 	ifs.close();
 	ofs.close();
+	return (0);
 } 
