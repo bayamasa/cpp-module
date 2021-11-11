@@ -4,7 +4,6 @@ ScavTrap::ScavTrap(std::string name)
 	: name(name)
 	, hit_points(100)
 	, energy_points(50)
-	, attack_damage(20)
 {
 	std::cout << "ScavTrap "<< name << " has been made!!" << std::endl;
 }

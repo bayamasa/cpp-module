@@ -6,11 +6,11 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by ncolomer          #+#    #+#              #
-#    Updated: 2021/11/11 10:13:46 by mhirabay         ###   ########.fr        #
+#    Updated: 2021/11/11 10:18:27 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
+SRCS			= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp Diamond.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
