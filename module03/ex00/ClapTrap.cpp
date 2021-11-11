@@ -25,6 +25,10 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
 	if (this != &other)
 	{
+		name = other.name;
+		hit_points = other.hit_points;
+		energy_points = other.energy_points;
+		attack_damage = other.attack_damage;
 	}
 	return *this;
 }
@@ -52,7 +56,6 @@ void ClapTrap::takeDamage(unsigned int amount)
 	<< " damage!" 
 	<< std::endl;
 
-	std::cout << "Energy is " << energy_points << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -62,8 +65,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 	<< name 
 	<< " takes repaired. Now " 
 	<< name
-	<< "'s hit points is"
-	<< hit_points + amount
+	<< "'s hit points is "
+	<< amount
 	<< " !" 
 	<< std::endl;
 }

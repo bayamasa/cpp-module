@@ -3,9 +3,9 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : public virtual ClapTrap
 {
-private:
+protected:
 	std::string name;
 	int hit_points;
 	int energy_points;

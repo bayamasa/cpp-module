@@ -1,11 +1,13 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name)
-	: name(name)
-	, hit_points(100)
-	, energy_points(50)
-	, attack_damage(20)
+ScavTrap::ScavTrap(){}
+
+ScavTrap::ScavTrap(std::string new_name)
 {
+	name = new_name;
+	hit_points = 100;
+	energy_points = 50;
+	attack_damage = 20;
 	std::cout << "ScavTrap "<< name << " has been made!!" << std::endl;
 }
 
@@ -30,6 +32,19 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 		attack_damage = other.attack_damage;
 	}
 	return *this;
+}
+
+void	ScavTrap::attack( std::string const &target ) 
+{
+	std::cout 
+	<< "ScavTrap " 
+	<< this->name 
+	<< " attacks " 
+	<< target 
+	<< ", causing " 
+	<< attack_damage 
+	<< " points of damage!" 
+	<< std::endl;
 }
 
 void ScavTrap::guardGate()

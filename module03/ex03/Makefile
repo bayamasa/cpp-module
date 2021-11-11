@@ -6,16 +6,16 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by ncolomer          #+#    #+#              #
-#    Updated: 2021/11/11 10:18:27 by mhirabay         ###   ########.fr        #
+#    Updated: 2021/11/11 14:33:32 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp Diamond.cpp
+SRCS			= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98 -pedantic
+CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98 -pedantic -Wshadow -Wno-shadow
 
 NAME			= a.out
 

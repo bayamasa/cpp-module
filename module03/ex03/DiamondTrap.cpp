@@ -1,19 +1,19 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name)
-	: name(name)
-	, hit_points(100)
-	, energy_points(50)
-	, attack_damage(20)
-{
-	std::cout << "DiamondTrap "<< name << " has been made!!" << std::endl;
-}
-
 DiamondTrap::~DiamondTrap()
 {
 	std::cout << "DiamondTrap " << name << " is out of order.."<< std::endl;
 }
 
+DiamondTrap::DiamondTrap(std::string newName)
+{
+	std::cout << "DiamondTrap "<< name << " has been made!!" << std::endl;
+	name = newName;
+	ClapTrap::name += "_clap_name";
+	FragTrap::hit_points = 100;
+	ScavTrap::energy_points = 50;
+	FragTrap::attack_damage = 30;
+}
 
 DiamondTrap::DiamondTrap(const DiamondTrap &other)
 {
@@ -25,18 +25,15 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 	if (this != &other)
 	{
 		name = other.name;
-		hit_points = other.hit_points;
-		energy_points = other.energy_points;
-		attack_damage = other.attack_damage;
+		FragTrap::hit_points = other.FragTrap::hit_points;
+		ScavTrap::energy_points = other.ScavTrap::energy_points;
+		FragTrap::attack_damage = other.FragTrap::attack_damage;
 	}
 	return *this;
 }
 
-void DiamondTrap::highFivesGuys()
+void DiamondTrap::whoAmI()
 {
-	std::cout 
-	<< "DiamondTrap " 
-	<< name 
-	<< " have requested high fives!!" 
-	<< std::endl;
+	std::cout << "ClapTrap name is " << ClapTrap::name << " !" << std::endl;
 }
+
