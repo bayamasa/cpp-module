@@ -18,11 +18,18 @@ ClapTrap::~ClapTrap()
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-	*this = other;
+	// この呼び方だとcopy constructorの中で、assigned operatorを呼んでしまっている。
+	// *this = other;
+	name = other.name;
+	hit_points = other.hit_points;
+	energy_points = other.energy_points;
+	attack_damage = other.attack_damage;
+	std::cout << "Copy Constructor ClapTrap "<< this->name << " has been made!!" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
+
 	if (this != &other)
 	{
 		name = other.name;
@@ -30,6 +37,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 		energy_points = other.energy_points;
 		attack_damage = other.attack_damage;
 	}
+	std::cout << "Assigned Operator ClapTrap "<< this->name << " has been made!!" << std::endl;
 	return *this;
 }
 

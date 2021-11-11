@@ -14,7 +14,7 @@ protected:
 public:
 	ClapTrap();
 	ClapTrap(std::string name);
-	virtual ~ClapTrap();
+	~ClapTrap();
 	ClapTrap(const ClapTrap &other);
 	ClapTrap &operator=(const ClapTrap &other);
 	void attack(std::string const &target);
