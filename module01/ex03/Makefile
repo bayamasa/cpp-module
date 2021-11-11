@@ -6,7 +6,7 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by ncolomer          #+#    #+#              #
-#    Updated: 2021/11/08 20:08:09 by mhirabay         ###   ########.fr        #
+#    Updated: 2021/11/11 21:42:33 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -I.
+CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98 -pedantic
 
-NAME			= main
+NAME			= a.out
 
 all:			$(NAME)
 

@@ -1,19 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/11 21:39:07 by mhirabay          #+#    #+#             */
+/*   Updated: 2021/11/11 21:39:08 by mhirabay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "HumanB.hpp"
 
 HumanB::HumanB(std::string name)
 {
-	this->name = name;
-	weapon = NULL;
+	_name = name;
+	_weapon = NULL;
 }
 
 HumanB::~HumanB(){}
 
 void HumanB::attack()
 {
-	std::cout << this->name << " attack with his " << weapon->getType() << std::endl;
+	std::cout << _name << " attack with his " << _weapon->getType() << std::endl;
 }
 
-void HumanB::setWeapon(Weapon &value)
+void HumanB::setWeapon(Weapon &weapon)
 {
-	weapon = &value;
+	_weapon = &weapon;
 }
