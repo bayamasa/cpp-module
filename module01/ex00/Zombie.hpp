@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 16:32:31 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/11 21:05:46 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/11 21:26:21 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 class Zombie
 {
 private:
-	std::string name;
+	std::string _name;
 public:
 	Zombie(std::string);
 	~Zombie();

@@ -6,9 +6,7 @@ HumanB::HumanB(std::string name)
 	weapon = NULL;
 }
 
-HumanB::~HumanB()
-{
-}
+HumanB::~HumanB(){}
 
 void HumanB::attack()
 {
