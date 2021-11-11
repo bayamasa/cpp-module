@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:44:07 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/11 21:51:18 by mhirabay         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:23:12 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	{
 		std::cout << "Invalid argument" << std::endl;
 		std::cout << "ref input type: <filename> <replace target> <replace result>" << std::endl;
-		return (0);
+		return 0;
 	}
 
 	filename = argv[1];
