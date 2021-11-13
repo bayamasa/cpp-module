@@ -20,12 +20,12 @@ Fixed::Fixed(const Fixed &obj)
 int Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return this->raw_bits;
+	return raw_bits;
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	this->raw_bits = raw;
+	raw_bits = raw;
 }
 
 Fixed &Fixed::operator=(const Fixed &other)
