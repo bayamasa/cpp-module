@@ -14,7 +14,7 @@ Fixed::Fixed(const int i)
 
 Fixed::Fixed(const float f)
 {
-	raw_bits = roundf(f * (1 << fraction_bits));
+	raw_bits = std::roundf(f * (1 << fraction_bits));
 }
 
 Fixed::Fixed(const Fixed &obj)
@@ -41,25 +41,36 @@ float Fixed::toFloat() const
 {
 	return (float)raw_bits / (1 << fraction_bits);
 }
-Fixed Fixed::operator+(const Fixed &rraw_bits) const {
-	return (Fixed(toFloat() + rraw_bits.toFloat()));
+Fixed Fixed::operator+(const Fixed &rvalue) const {
+	Fixed res;
+	res.setRawBits(raw_bits + rvalue.getRawBits());
+	return res;
 }	
 
-Fixed Fixed::operator-(const Fixed &rraw_bits) const {
-	return (Fixed(toFloat() - rraw_bits.toFloat()));
+Fixed Fixed::operator-(const Fixed &rvalue) const {
+	Fixed res;
+	res.setRawBits(raw_bits - rvalue.getRawBits());
+	return res;
 }
 
-Fixed Fixed::operator*(const Fixed &rraw_bits) const {
-	return (Fixed(toFloat() * rraw_bits.toFloat()));
+Fixed Fixed::operator*(const Fixed &rvalue) const {
+	long ans = ((long)raw_bits) * (long)rvalue.getRawBits();
+	ans >>= fraction_bits;
+	Fixed res;
+	res.setRawBits((int)ans);
+	return res;
 }
 
-Fixed Fixed::operator/(const Fixed &rraw_bits) const {
-	if (rraw_bits.toFloat() == 0)
+Fixed Fixed::operator/(const Fixed &rvalue) const {
+	if (rvalue.toFloat() == 0)
 	{
 		std::cout << "Forbidden divided by 0" << std::endl;
 		exit(1);
 	}
-	return (Fixed(toFloat() / rraw_bits.toFloat()));
+	long ans = ((long)raw_bits << fraction_bits) / (long)rvalue.getRawBits();
+	Fixed res;
+	res.setRawBits((int)ans);
+	return res;
 }
 
 Fixed &Fixed::operator=(const Fixed &other)

@@ -19,6 +19,7 @@ public:
 	void setRawBits( int const raw );
 	float toFloat(void) const;
 	int toInt(void) const;
+
 	static Fixed min(Fixed &lv, Fixed const &rv)
 	{
 		if (lv <= rv)
@@ -61,9 +62,9 @@ public:
   		return *this;
 	}
 	Fixed operator++(int) {
-		Fixed old = *this;  // increment前の値をコピー
-		++(*this);// 自分自身を前置incrementする
-		return old;  // increment前の値を返す
+		Fixed old = *this;  
+		++(*this);
+		return old;
 	}
 };
 
