@@ -13,15 +13,12 @@ Fixed::~Fixed()
 Fixed::Fixed(const int i)
 {
 	std::cout << "Int constructor called" << std::endl;
-	// fraction bit は8bit存在するので、
-	// rawbitの下位8bitは整数部では扱わない。
 	raw_bits = i << fraction_bits;
 }
 
 Fixed::Fixed(const float f)
 {
 	std::cout << "Float constructor called" << std::endl;
-	// f << fractionbits はfloatの使用上、使用不可
 	raw_bits = roundf(f * (1 << fraction_bits));
 }
 
@@ -33,12 +30,12 @@ Fixed::Fixed(const Fixed &obj)
 
 int Fixed::getRawBits(void) const
 {
-	return this->raw_bits;
+	return raw_bits;
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	this->raw_bits = raw;
+	raw_bits = raw;
 }
 
 Fixed &Fixed::operator=(const Fixed &other)

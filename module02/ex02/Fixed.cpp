@@ -14,7 +14,7 @@ Fixed::Fixed(const int i)
 
 Fixed::Fixed(const float f)
 {
-	raw_bits = std::roundf(f * (1 << fraction_bits));
+	raw_bits = roundf(f * (1 << fraction_bits));
 }
 
 Fixed::Fixed(const Fixed &obj)
@@ -24,12 +24,12 @@ Fixed::Fixed(const Fixed &obj)
 
 int Fixed::getRawBits(void) const
 {
-	return this->raw_bits;
+	return raw_bits;
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	this->raw_bits = raw;
+	raw_bits = raw;
 }
 
 int Fixed::toInt() const
