@@ -20,24 +20,26 @@ void execScav(ScavTrap &scav)
 
 int main(void)
 {
-	std::cout << "============ClapTrap=============" << std::endl;
-	ClapTrap a = ClapTrap("a");
-	ClapTrap b(a);
-	ClapTrap c;
-	c = b;
-	execClap(a);
-	execClap(b);
-	execClap(c);
-
-	std::cout << "============ScavTrap=============" << std::endl;
-	ScavTrap d = ScavTrap("d");
-	ScavTrap e(d);
-	ScavTrap f;
-	f = e;
-	execScav(d);
-	execScav(e);
-	execScav(f);
-	std::cout << "=================================" << std::endl;
-
+	{
+		std::cout << "============ClapTrap=============" << std::endl;
+		ClapTrap a = ClapTrap("a");
+		ClapTrap b(a);
+		ClapTrap c;
+		c = b;
+		execClap(a);
+		execClap(b);
+		execClap(c);
+	}
+	{
+		std::cout << "============ScavTrap=============" << std::endl;
+		ScavTrap d = ScavTrap("d");
+		ScavTrap e(d);
+		ScavTrap f;
+		f = e;
+		execScav(d);
+		execScav(e);
+		execScav(f);
+		std::cout << "=================================" << std::endl;
+	}
 	return (0);
 }

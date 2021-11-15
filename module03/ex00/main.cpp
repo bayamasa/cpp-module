@@ -5,8 +5,8 @@
 void execClap(ClapTrap &clap)
 {
 	clap.attack("enemy");
-	clap.takeDamage(99999);
-	clap.beRepaired(100);
+	clap.takeDamage(UINT32_MAX);
+	clap.beRepaired(UINT32_MAX);
 }
 
 

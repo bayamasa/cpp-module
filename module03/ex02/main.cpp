@@ -27,34 +27,37 @@ void execFrag(FragTrap &trap)
 
 int main(void)
 {
-	std::cout << "============ClapTrap=============" << std::endl;
-	ClapTrap a = ClapTrap("a");
-	ClapTrap b(a);
-	ClapTrap c;
-	c = b;
-	execClap(a);
-	execClap(b);
-	execClap(c);
+	{
+		std::cout << "============ClapTrap=============" << std::endl;
+		ClapTrap a = ClapTrap("a");
+		ClapTrap b(a);
+		ClapTrap c;
+		c = b;
+		execClap(a);
+		execClap(b);
+		execClap(c);
+	}
+	{
+		std::cout << "============ScavTrap=============" << std::endl;
+		ScavTrap d = ScavTrap("d");
+		ScavTrap e(d);
+		ScavTrap f;
+		f = e;
+		execScav(d);
+		execScav(e);
+		execScav(f);
+	}
+	{
+		std::cout << "============FragTrap=============" << std::endl;
+		FragTrap g = FragTrap("d");
+		FragTrap h(g);
+		FragTrap k;
+		k = h;
 
-	std::cout << "============ScavTrap=============" << std::endl;
-	ScavTrap d = ScavTrap("d");
-	ScavTrap e(d);
-	ScavTrap f;
-	f = e;
-	execScav(d);
-	execScav(e);
-	execScav(f);
-
-	std::cout << "============FragTrap=============" << std::endl;
-	FragTrap g = FragTrap("d");
-	FragTrap h(g);
-	FragTrap k;
-	k = h;
-
-	execFrag(g);
-	execFrag(h);
-	execFrag(k);
+		execFrag(g);
+		execFrag(h);
+		execFrag(k);
+	}
 	std::cout << "=================================" << std::endl;
-
 	return (0);
 }

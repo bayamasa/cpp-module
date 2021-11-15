@@ -4,9 +4,8 @@
 #include <string>
 #include "ClapTrap.hpp"
 
-class ScavTrap : public virtual ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
-private:
 public:
 	ScavTrap();
 	ScavTrap(std::string name);
