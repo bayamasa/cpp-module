@@ -2,12 +2,12 @@
 
 Cure::Cure()
 {
-	std::cout << "created Cure materia instance" << std::endl;
+	// std::cout << "created Cure materia instance" << std::endl;
 	_type = "cure";
 }
 Cure::~Cure()
 {
-	std::cout << "materia cure has been deleted" << std::endl;
+	// std::cout << "materia cure has been deleted" << std::endl;
 }
 Cure::Cure(const Cure &other)
 {
@@ -17,6 +17,7 @@ Cure &Cure::operator=(const Cure &other)
 {
 	if (this != &other)
 	{
+		_type = other._type;
 	}
 	return *this;
 }
@@ -29,7 +30,7 @@ AMateria* Cure::clone() const
 void Cure::use(ICharacter& target)
 {
 	std::cout 
-	<< "heals "
+	<< "* heals "
 	<< target.getName()
 	<< "'s wounds *"
 	<< std::endl;

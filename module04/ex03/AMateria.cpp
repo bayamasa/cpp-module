@@ -1,13 +1,14 @@
 #include "AMateria.hpp"
 #include <iostream>
 
-AMateria::AMateria()
+AMateria::AMateria(){}
+
+AMateria::AMateria(std::string const& type) 
 {
+	_type = type;
 }
 
-AMateria::~AMateria()
-{
-}
+AMateria::~AMateria(){}
 
 AMateria::AMateria(const AMateria &other)
 {
@@ -23,10 +24,6 @@ AMateria	&AMateria::operator=(const AMateria &other)
 	return *this;
 }
 
-AMateria::AMateria(std::string const& type) : _type(type)
-{
-}
-
 std::string const&	AMateria::getType() const
 {
 	return _type;
@@ -34,8 +31,8 @@ std::string const&	AMateria::getType() const
 
 void	AMateria::use(ICharacter& target)
 {
-	std::cout 
-	<< "use materia to " 
+	std::cout
+	<< "* use materia to " 
 	<< target.getName() 
 	<< " *" 
 	<< std::endl;
