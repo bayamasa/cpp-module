@@ -2,12 +2,15 @@
 # define CHARACTER_HPP
 
 #include <string>
+#include <iostream>
 #include "ICharacter.hpp"
 
+#define INVENTORY_SIZE 4
 class Character : public ICharacter
 {
 private:
 	std::string _name;
+	AMateria* inventory[INVENTORY_SIZE];
 public:
 	Character();
 	Character(std::string name);

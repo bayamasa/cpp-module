@@ -6,11 +6,11 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by ncolomer          #+#    #+#              #
-#    Updated: 2021/11/12 17:27:03 by mhirabay         ###   ########.fr        #
+#    Updated: 2021/11/16 15:36:25 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= AMateria.cpp Cure.cpp Ice.cpp ICharacter.cpp Character.cpp IMateriaSource.cpp MateriaSource.cpp  
+SRCS			= main.cpp  AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
@@ -32,4 +32,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean re test
+.PHONY:			all clean fclean re
