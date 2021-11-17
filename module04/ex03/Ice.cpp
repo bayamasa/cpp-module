@@ -2,12 +2,10 @@
 
 Ice::Ice()
 {
-	// std::cout << "created Ice materia instance" << std::endl;
 	_type = "ice";
 }
 Ice::~Ice()
 {
-	// std::cout << "materia ice has been deleted" << std::endl;
 }
 Ice::Ice(const Ice &other)
 {

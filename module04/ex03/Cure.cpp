@@ -2,12 +2,10 @@
 
 Cure::Cure()
 {
-	// std::cout << "created Cure materia instance" << std::endl;
 	_type = "cure";
 }
 Cure::~Cure()
 {
-	// std::cout << "materia cure has been deleted" << std::endl;
 }
 Cure::Cure(const Cure &other)
 {

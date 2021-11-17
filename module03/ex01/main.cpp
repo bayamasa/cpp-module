@@ -32,13 +32,13 @@ int main(void)
 	}
 	{
 		std::cout << "============ScavTrap=============" << std::endl;
-		ScavTrap d = ScavTrap("d");
-		ScavTrap e(d);
-		ScavTrap f;
-		f = e;
-		execScav(d);
-		execScav(e);
-		execScav(f);
+		ClapTrap d = ScavTrap("d");
+		// ScavTrap e(d);
+		// ScavTrap f;
+		// f = e;
+		// execScav(d);
+		// execScav(e);
+		// execScav(f);
 		std::cout << "=================================" << std::endl;
 	}
 	return (0);
