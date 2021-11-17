@@ -25,7 +25,6 @@ Character &Character::operator=(const Character &other)
 				inventory[i] = other.inventory[i];
 			}
 		}
-		
 	}
 	return *this;
 }

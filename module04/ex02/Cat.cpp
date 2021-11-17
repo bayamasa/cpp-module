@@ -21,6 +21,7 @@ Cat::Cat(const Cat &other)
 
 Cat &Cat::operator=(const Cat &other)
 {
+	std::cout << "Assigned operator called: Cat" << std::endl;
 	if (this != &other)
 	{
 		type = other.getType();
@@ -32,4 +33,13 @@ Cat &Cat::operator=(const Cat &other)
 void Cat::makeSound() const
 {
 	std::cout << "Meow" << std::endl;
+}
+const std::string &Cat::getIdeas(int index) const
+{
+	return _brain->getIdeas(index);
+}
+
+void Cat::setIdeas(std::string &idea)
+{
+	_brain->setIdeas(idea);
 }

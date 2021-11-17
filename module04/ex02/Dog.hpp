@@ -15,6 +15,8 @@ public:
 	Dog(const Dog &other);
 	Dog &operator=(const Dog &other);
 	void makeSound() const;
+	const std::string &getIdeas(int index) const;
+	void setIdeas(std::string &idea);
 };
 
 #endif

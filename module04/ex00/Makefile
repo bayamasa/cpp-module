@@ -6,11 +6,11 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by ncolomer          #+#    #+#              #
-#    Updated: 2021/11/12 10:23:07 by mhirabay         ###   ########.fr        #
+#    Updated: 2021/11/17 20:39:54 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= Animal.cpp main.cpp Cat.cpp Dog.cpp
+SRCS			= Animal.cpp main.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
@@ -32,4 +32,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean re test
+.PHONY:			all clean fclean re 

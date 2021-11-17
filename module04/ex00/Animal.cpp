@@ -1,6 +1,9 @@
 #include "Animal.hpp"
 
-Animal::Animal(){}
+Animal::Animal()
+{
+	type = "Animal";
+}
 
 Animal::~Animal(){}
 
@@ -21,7 +24,6 @@ std::string const & Animal::getType() const
 {
 	return type;
 }
-
 
 
 void Animal::makeSound() const
