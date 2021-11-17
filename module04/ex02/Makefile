@@ -6,7 +6,7 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by ncolomer          #+#    #+#              #
-#    Updated: 2021/11/12 15:34:09 by mhirabay         ###   ########.fr        #
+#    Updated: 2021/11/17 22:28:02 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,4 +32,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean re test
+.PHONY:			all clean fclean re 

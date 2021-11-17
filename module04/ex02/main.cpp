@@ -9,20 +9,6 @@
 int main()
 {
 	// コンパイルエラーになる。
-	const Animal* animal = new Animal();
-	// const Animal* animal[100];
+	// const Animal* animal = new Animal();
 
-	// for (int i = 0; i < 100; i++)
-	// {
-	// 	if (i % 2 == 0)
-	// 		animal[i] = new Dog();
-	// 	else
-	// 		animal[i] = new Cat();
-	// 	animal[i]->makeSound();
-	// }
-	// for (int i = 0; i < 100; i++)
-	// {
-	// 	delete animal[i];
-	// }
-	// system("leaks a.out");
 }
