@@ -8,7 +8,7 @@ int main()
 {
 	try
 	{
-		Bureaucrat abe("abe", 50);
+		Bureaucrat abe("abe", 40);
 		ShrubberyCreationForm form("hi");
 		form.beSigned(abe);
 		form.execute(abe);
@@ -16,7 +16,7 @@ int main()
 		Bureaucrat suga("suga", 50);
 		RobotomyRequestForm form_1("hiaaaaaaaaa");
 		form_1.beSigned(abe);
-		// form_1.execute(suga);
+		form_1.execute(abe);
 	}
 	catch (std::exception &e)
 	{
