@@ -28,11 +28,17 @@ public:
 	const int &getGradeToSign() const;
 	const int &getGradeToExec() const;
 	bool getBeSigned() const;
+	void execute(Bureaucrat const & executor) const;
+	virtual void executeForm() const = 0;
 	class GradeTooHighException : public std::exception {
 	public:
 		const char *what() const throw();
 	};
 	class GradeTooLowException : public std::exception {
+	public:
+		const char *what() const throw();
+	};
+	class FormSignedException : public std::exception {
 	public:
 		const char *what() const throw();
 	};
