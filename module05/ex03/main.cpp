@@ -16,9 +16,6 @@ int main()
 		Bureaucrat suga("suga", 50);
 		std::cout << abe << std::endl;
 		std::cout << suga << std::endl;
-		// RobotomyRequestForm form_1("hiaaaaaaaaa");
-		// form_1.beSigned(abe);
-		// form_1.execute(abe);
 		rrf->beSigned(suga);
 		rrf->execute(abe);
 
@@ -29,6 +26,6 @@ int main()
 		return (1);
 	}
 	delete rrf;
-	// system("leaks a.out");
+	system("leaks a.out");
 	return (0);
 }
