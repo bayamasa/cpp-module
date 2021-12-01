@@ -1,5 +1,5 @@
-#ifndef FIFixedED_HPP
-# define FIFixedED_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 #include <iostream>
 #include <cmath>
@@ -38,7 +38,7 @@ public:
 	Fixed operator-(const Fixed &rraw_bits) const;
 	Fixed operator*(const Fixed &rraw_bits) const;
 	Fixed operator/(const Fixed &rraw_bits) const; 
-
+	// headerファイルに処理を書き込まない
 	bool operator<(const Fixed& rraw_bits){  
 		return raw_bits < rraw_bits.getRawBits();
 	}
