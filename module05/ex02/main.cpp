@@ -12,11 +12,12 @@ int main()
 		ShrubberyCreationForm form("hi");
 		form.beSigned(abe);
 		form.execute(abe);
+		std::cout << form << std::endl;
 
-		Bureaucrat suga("suga", 50);
-		RobotomyRequestForm form_1("hiaaaaaaaaa");
-		form_1.beSigned(abe);
-		form_1.execute(abe);
+		// Bureaucrat suga("suga", 50);
+		// RobotomyRequestForm form_1("hiaaaaaaaaa");
+		// form_1.beSigned(abe);
+		// form_1.execute(abe);
 	}
 	catch (std::exception &e)
 	{
