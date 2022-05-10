@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:43:03 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/11 21:43:04 by mhirabay         ###   ########.fr       */
+/*   Updated: 2022/05/10 14:28:27 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define WEAPON_HPP
 
 #include <string>
+#include <iostream>
 
 class Weapon
 {

@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:38:47 by mhirabay          #+#    #+#             */
-/*   Updated: 2022/05/10 14:25:17 by mhirabay         ###   ########.fr       */
+/*   Updated: 2022/05/10 14:27:16 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ HumanA::HumanA(std::string name, Weapon &weapon)
 	_weapon = &weapon;
 }
 
-HumanA::~HumanA(){}
+HumanA::~HumanA()
+{	
+	std::cout << _name << " has disappeared.." << std::endl;
+}
 
 void HumanA::attack()
 {
