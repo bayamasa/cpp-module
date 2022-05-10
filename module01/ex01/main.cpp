@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:08:58 by mhirabay          #+#    #+#             */
-/*   Updated: 2022/05/10 09:58:54 by mhirabay         ###   ########.fr       */
+/*   Updated: 2022/05/10 14:42:56 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int main(void)
 		horde[i].announce();
 	}
 	delete []horde;
-	// system("leaks a.out");
 	return (0);
 }
 
