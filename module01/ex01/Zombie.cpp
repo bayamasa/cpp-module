@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:09:05 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/11 21:28:06 by mhirabay         ###   ########.fr       */
+/*   Updated: 2022/05/10 09:52:00 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Zombie::~Zombie()
 
 void Zombie::announce(void)
 {
-	std::cout << _name << " BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 void Zombie::setName(std::string name)
