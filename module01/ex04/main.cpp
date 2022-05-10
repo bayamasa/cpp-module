@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:44:07 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/12/01 15:17:04 by mhirabay         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:12:22 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,12 @@ int main(int argc, char *argv[])
 	std::string line;
 	while (std::getline(ifs, line))
 	{	
-		ssize_t index = line.find(orig);
-		if (index >= 0)
-			ofs << line.erase(index, orig.length()).insert(index, repl) << std::endl;
-		else
-			ofs << line << std::endl;
+		std::string::size_type pos = 0;
+		while ((pos = line.find(orig, pos)) != std::string::npos) {
+			line.erase(pos, orig.length()).insert(pos, repl);
+			pos += repl.length();
+		}
+		ofs << line << std::endl;
 	}
 	
 	ifs.close();
