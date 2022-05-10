@@ -6,11 +6,11 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by mhirabay          #+#    #+#              #
-#    Updated: 2021/11/26 14:20:03 by mhirabay         ###   ########.fr        #
+#    Updated: 2022/05/10 15:07:24 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Karen.cpp
+SRCS			= main.cpp Harl.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++

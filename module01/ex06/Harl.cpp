@@ -27,15 +27,14 @@ void Harl::info(void)
 {
 	std::cout << "[ INFO ]" << std::endl;
 	std::cout << "I cannot believe adding extra bacon cost more money." << std::endl;
-	std::cout << "You don’t put enough! If you did I would not have to ask for it!" << std::endl;
-	
+	std::cout << "You didn't put enough! If you did I would not have to ask for it!" << std::endl;
 }
 
 void Harl::warning(void)
 {
 	std::cout << "[ WARNING ]" << std::endl;
 	std::cout << "I think I deserve to have some extra bacon for free." << std::endl;
-	std::cout << "I’ve been coming here for years and you just started working here last month." << std::endl;
+	std::cout << "I've been coming here for years and you just started working here last month." << std::endl;
 }
 
 void Harl::error(void)

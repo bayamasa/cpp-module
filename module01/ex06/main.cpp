@@ -6,7 +6,7 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 22:00:09 by mhirabay          #+#    #+#             */
-/*   Updated: 2022/05/10 14:47:11 by mhirabay         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:21:04 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int main(int argc, char const *argv[])
 			std::exit(0);
 		}
 	}
-	std::cout << "Invalid argument" << std::endl;
+	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	return 0;
 }
