@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Harl.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,23 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 
 #include <string>
 #include <iostream>
 
-class Karen
+class Harl
 {
 private:
 	void debug(void);
 	void info(void);
 	void warning(void);
 	void error(void);
-	typedef void (Karen::*action)(void);
+	typedef void (Harl::*action)(void);
 public:
-	Karen();
-	~Karen();
+	Harl();
+	~Harl();
 	void (* funcPtr)();
 	void complain(int level);
 };

@@ -6,16 +6,16 @@
 /*   By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 22:00:09 by mhirabay          #+#    #+#             */
-/*   Updated: 2021/11/11 22:24:00 by mhirabay         ###   ########.fr       */
+/*   Updated: 2022/05/10 14:47:11 by mhirabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 
 int main(int argc, char const *argv[])
 {
-	Karen aunt;
+	Harl aunt;
 	if (argc != 2)
 	{
 		std::cout << "Invalid argument" << std::endl;
