@@ -36,5 +36,3 @@ void Fixed::setRawBits(int const raw)
 {
 	raw_bits = raw;
 }
-
-
