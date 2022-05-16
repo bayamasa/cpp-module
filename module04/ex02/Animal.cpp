@@ -3,7 +3,7 @@
 Animal::Animal()
 {
 	std::cout << "Constuctor called: Animal" << std::endl;
-
+	type = "Animal";
 }
 
 Animal::~Animal()
@@ -19,6 +19,7 @@ Animal::Animal(const Animal &other)
 
 Animal &Animal::operator=(const Animal &other)
 {
+	std::cout << "Assigned Operator called: Animal" << std::endl;
 	if (this != &other)
 	{
 		type = other.getType();
@@ -30,8 +31,6 @@ std::string const & Animal::getType() const
 {
 	return type;
 }
-
-
 
 void Animal::makeSound() const
 {
