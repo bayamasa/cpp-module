@@ -18,10 +18,11 @@ Dog::Dog(const Dog &other)
 }
 Dog &Dog::operator=(const Dog &other)
 {
+	std::cout << "Assigned operator called: Dog" << std::endl;
 	if (this != &other)
 	{
 		type = other.getType();
-		_brain = other._brain;
+		_brain = new Brain(*other._brain);
 	}
 	return *this;
 }
@@ -29,13 +30,4 @@ Dog &Dog::operator=(const Dog &other)
 void Dog::makeSound() const
 {
 	std::cout << "Bow!" << std::endl;
-}
-const std::string &Dog::getIdeas(int index) const
-{
-	return _brain->getIdeas(index);
-}
-
-void Dog::setIdeas(std::string &idea)
-{
-	_brain->setIdeas(idea);
 }
