@@ -6,7 +6,7 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 18:47:47 by mhirabay          #+#    #+#              #
-#    Updated: 2022/05/16 16:19:06 by mhirabay         ###   ########.fr        #
+#    Updated: 2022/05/16 17:12:14 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98 -pedantic -Wshadow -Wno-shadow
+CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98 -pedantic -Wshadow
 
 NAME			= a.out
 
