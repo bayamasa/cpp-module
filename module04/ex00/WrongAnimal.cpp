@@ -2,17 +2,24 @@
 
 WrongAnimal::WrongAnimal()
 {
+	std::cout << "Constuctor called: WrongAnimal" << std::endl;
 	type = "WrongAnimal";
 }
 
-WrongAnimal::~WrongAnimal(){}
+WrongAnimal::~WrongAnimal()
+{
+	std::cout << "Destuctor called: WrongAnimal" << std::endl;
+}
 
 WrongAnimal::WrongAnimal(const WrongAnimal &other)
 {
+	std::cout << "Copy Constuctor called: WrongAnimal" << std::endl;
 	*this = other;
 }
+
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
+	std::cout << "Assigned Operator called: WrongAnimal" << std::endl;
 	if (this != &other)
 	{
 		type = other.getType();

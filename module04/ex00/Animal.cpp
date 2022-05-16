@@ -2,22 +2,24 @@
 
 Animal::Animal()
 {
-	std::cout << "Animal Constructor called" << std::endl;
+	std::cout << "Constuctor called: Animal" << std::endl;
 	type = "Animal";
 }
 
-Animal::~Animal(){
-	std::cout << "Animal Destructor called" << std::endl;
+Animal::~Animal()
+{
+	std::cout << "Destuctor called: Animal" << std::endl;
 }
 
 Animal::Animal(const Animal &other)
 {
-	std::cout << "Animal Copy Constructor called" << std::endl;
+	std::cout << "Copy Constuctor called: Animal" << std::endl;
 	*this = other;
 }
+
 Animal &Animal::operator=(const Animal &other)
 {
-	std::cout << "Animal Assigned Operator called" << std::endl;
+	std::cout << "Assigned Operator called: Animal" << std::endl;
 	if (this != &other)
 	{
 		type = other.getType();
@@ -29,7 +31,6 @@ std::string const & Animal::getType() const
 {
 	return type;
 }
-
 
 void Animal::makeSound() const
 {
