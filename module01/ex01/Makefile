@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/12/13 18:47:47 by mhirabay          #+#    #+#              #
-#    Updated: 2022/05/10 17:14:37 by mhirabay         ###   ########.fr        #
+#    Created: 2021/11/13 18:47:47 by mhirabay          #+#    #+#              #
+#    Updated: 2022/05/17 14:56:02 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Zombie.cpp ZombieHorde.cpp 
+SRCS			= main.cpp Zombie.cpp zombieHorde.cpp 
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
