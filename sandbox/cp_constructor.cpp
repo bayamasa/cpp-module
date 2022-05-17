@@ -17,6 +17,10 @@ public:
 };
 
 int main() {
+	// Cat a;
+	// a.getCat(&a);
+	
 	Cat a;
-	a.getCat(&a);
+	Cat b;
+	b = a;
 }
