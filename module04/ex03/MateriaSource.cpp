@@ -2,7 +2,6 @@
 
 MateriaSource::MateriaSource()
 {
-	std::cout << "materia constructor" << std::endl;
 	for (int i = 0; i < SRC_LIMIT; i++)
 	{
 		src[i] = NULL;
@@ -11,7 +10,6 @@ MateriaSource::MateriaSource()
 
 MateriaSource::~MateriaSource()
 {
-	std::cout << "materia source destructor" << std::endl;
 	for (int i = 0; i < SRC_LIMIT; i++)
 	{
 		if(src[i] != NULL)
@@ -22,7 +20,6 @@ MateriaSource::~MateriaSource()
 }
 MateriaSource::MateriaSource(const MateriaSource &other)
 {
-	std::cout << "materia cp constructor" << std::endl;
 	for (int i = 0; i < SRC_LIMIT; i++)
 	{
 		src[i] = NULL;
@@ -32,7 +29,6 @@ MateriaSource::MateriaSource(const MateriaSource &other)
 
 MateriaSource &MateriaSource::operator=(const MateriaSource &other)
 {
-	std::cout << "materia assigned operator" << std::endl;
 	if (this != &other)
 	{
 		for (int i = 0; i < SRC_LIMIT; i++)
