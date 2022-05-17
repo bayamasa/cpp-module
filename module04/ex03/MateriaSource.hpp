@@ -12,7 +12,7 @@
 class MateriaSource : public IMateriaSource
 {
 private:
-	AMateria *src[4];
+	AMateria* src[4];
 public:
 	MateriaSource();
 	~MateriaSource();
