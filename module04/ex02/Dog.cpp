@@ -14,6 +14,7 @@ Dog::~Dog()
 Dog::Dog(const Dog &other)
 {
 	std::cout << "Copy Constuctor called: Dog" << std::endl;
+	_brain = new Brain();
 	*this = other;
 }
 Dog &Dog::operator=(const Dog &other)
@@ -22,6 +23,7 @@ Dog &Dog::operator=(const Dog &other)
 	if (this != &other)
 	{
 		type = other.getType();
+		delete _brain;
 		_brain = new Brain(*other._brain);
 	}
 	return *this;
