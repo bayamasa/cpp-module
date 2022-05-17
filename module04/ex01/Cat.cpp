@@ -16,6 +16,7 @@ Cat::~Cat()
 Cat::Cat(const Cat &other)
 {
 	std::cout << "Copy Constuctor called: Cat" << std::endl;
+	_brain = new Brain();
 	*this = other;
 }
 
@@ -25,6 +26,7 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		type = other.getType();
+		delete _brain;
 		_brain = new Brain(*other._brain);
 	}
 	return *this;
