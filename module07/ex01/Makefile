@@ -6,14 +6,14 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 18:47:47 by mhirabay          #+#    #+#              #
-#    Updated: 2022/05/17 14:56:02 by mhirabay         ###   ########.fr        #
+#    Updated: 2022/05/18 11:06:58 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS			= main.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
-CXX				= clang++
+CXX				= c++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98 -pedantic -Wshadow -Wno-shadow
 
