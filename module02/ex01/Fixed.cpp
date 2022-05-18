@@ -10,6 +10,7 @@ Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
 }
+
 Fixed::Fixed(const int i)
 {
 	std::cout << "Int constructor called" << std::endl;
@@ -30,7 +31,7 @@ Fixed::Fixed(const Fixed &other)
 
 Fixed &Fixed::operator=(const Fixed &other)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Assignment operator called" << std::endl;
 	if (this != &other) {
 		setRawBits(other.getRawBits());
 	}
