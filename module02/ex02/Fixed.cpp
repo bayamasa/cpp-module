@@ -58,14 +58,28 @@ float Fixed::toFloat() const
 	return (float)raw_bits / (1 << fraction_bits);
 }
 
-Fixed Fixed::min(Fixed &lv, Fixed const &rv)
+Fixed &Fixed::min(Fixed &lv, Fixed &rv)
 {
 	if (lv <= rv)
 		return lv;
 	return rv;
 }
 
-Fixed Fixed::max(Fixed &lv, Fixed const &rv)
+const Fixed &min(const Fixed &lv, const Fixed &rv)
+{
+	if (lv <= rv)
+		return lv;
+	return rv;
+}
+
+Fixed &Fixed::max(Fixed &lv, Fixed &rv)
+{
+	if (lv >= rv)
+		return lv;
+	return rv;
+}
+
+const Fixed &Fixed::max(const Fixed &lv, const Fixed &rv)
 {
 	if (lv >= rv)
 		return lv;
@@ -104,27 +118,27 @@ Fixed Fixed::operator/(const Fixed &rvalue) const {
 	return res;
 }
 
-bool Fixed::operator<(const Fixed& rraw_bits){  
+bool Fixed::operator<(const Fixed &rraw_bits) const{  
 	return raw_bits < rraw_bits.getRawBits();
 }
 
-bool Fixed::operator>(const Fixed& rraw_bits) {
+bool Fixed::operator>(const Fixed &rraw_bits) const{
 	return raw_bits > rraw_bits.getRawBits();
 }
 
-bool Fixed::operator<=(const Fixed& rraw_bits) {
+bool Fixed::operator<=(const Fixed &rraw_bits) const{
 	return raw_bits <= rraw_bits.getRawBits();
 }
 
-bool Fixed::operator>=(const Fixed& rraw_bits) {
+bool Fixed::operator>=(const Fixed &rraw_bits) const{
 	return raw_bits >= rraw_bits.getRawBits();
 }
 
-bool Fixed::operator==(const Fixed& rraw_bits) {
+bool Fixed::operator==(const Fixed &rraw_bits) const{
 	return raw_bits == rraw_bits.getRawBits();
 }
 
-bool Fixed::operator!=(const Fixed& rraw_bits) {
+bool Fixed::operator!=(const Fixed &rraw_bits) const{
 	return raw_bits != rraw_bits.getRawBits();
 }
 
@@ -136,6 +150,17 @@ Fixed &Fixed::operator++() {
 Fixed Fixed::operator++(int) {
 	Fixed old = *this; 
 	++(*this);
+	return old;
+}
+
+Fixed &Fixed::operator--() {
+	raw_bits--;
+	return *this;
+}
+
+Fixed Fixed::operator--(int) {
+	Fixed old = *this; 
+	--(*this);
 	return old;
 }
 
