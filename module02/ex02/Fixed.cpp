@@ -65,7 +65,7 @@ Fixed &Fixed::min(Fixed &lv, Fixed &rv)
 	return rv;
 }
 
-const Fixed &min(const Fixed &lv, const Fixed &rv)
+const Fixed &Fixed::min(const Fixed &lv, const Fixed &rv)
 {
 	if (lv <= rv)
 		return lv;
