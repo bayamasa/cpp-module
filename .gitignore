@@ -3,3 +3,4 @@ a.out
 *.replace
 .vscode
 harlFilter
+.json
