@@ -30,52 +30,38 @@ Converter &Converter::operator=(const Converter &other)
 }
 void Converter::printType()
 {
-	if (type == Char)
+	if (_type == Char)
 	{
 		std::cout << "char" << std::endl;
 	}
-	if (type == Int)
+	if (_type == Int)
 	{
 		std::cout << "Int" << std::endl;
 	}
-	if (type == Float)
+	if (_type == Float)
 	{
 		std::cout << "Float" << std::endl;
 	}
-	if (type == Double)
+	if (_type == Double)
 	{
 		std::cout << "Double" << std::endl;
 	}
 }
 
-void Converter::detectType()
+Type Converter::detectType()
 {
 	if (_org.empty())
-	{
-		type = Impossible;
-		return;
-	}
+		return Impossible;
 	else if (isChar())
-	{
-		type = Char;
-		return;
-	}
+		return Char;
 	else if (isInt())
-	{
-		type = Int;
-		return;
-	}
+		return Int;
 	else if (isFloat())
-	{
-		type = Float;
-		return;
-	}
+		return Float;
 	else if (isDouble())
-	{
-		type = Double;
-		return;
-	}
+		return Double;
 	std::cout << "Impossible reach" << std::endl;	
+	return Impossible;
 }
 
 bool Converter::isChar()
@@ -119,7 +105,6 @@ bool Converter::isFloat()
 	{
 		return false;
 	}
-	std::cout << v << std::endl;
 	if (v > std::numeric_limits<float>::max() || v < -std::numeric_limits<float>::max())
 		return false;
 	if (v < std::numeric_limits<float>::min() && v > -std::numeric_limits<float>::min())
@@ -155,9 +140,13 @@ void Converter::setOrg(std::string &org)
 
 Type Converter::getType() const
 {
-	return type;
+	return _type;
 }
 
+void Converter::setType(const Type &type)
+{
+	_type = type;
+}
 
 
 

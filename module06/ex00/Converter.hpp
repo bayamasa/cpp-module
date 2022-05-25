@@ -17,7 +17,7 @@ class Converter
 {
 private:
 	std::string _org;
-	Type type;
+	Type _type;
 	char _c;
 	int _i;
 	float _f;
@@ -32,8 +32,9 @@ public:
 	~Converter();
 	Converter(const Converter &other);
 	void printType();
-	void detectType();
+	Type detectType();
 	Type getType() const;
+	void setType(const Type &type);
 	void setOrg(std::string &org);
 	Converter &operator=(const Converter &other);
 };
