@@ -1,26 +1,28 @@
-#include "Converter.hpp"
+#include "StringConverter.hpp"
 
-Converter::Converter(){}
+StringConverter::StringConverter(){}
 
-Converter::Converter(std::string org)
+StringConverter::StringConverter(std::string org)
 {
 	_org = org;
+	setType(detectType());
+	convert();
 	_c = '\0';
 	_i = 0;
 	_f = 0;
 	_d = 0.0;
 }
 
-Converter::~Converter()
+StringConverter::~StringConverter()
 {
 }
 
-Converter::Converter(const Converter &other)
+StringConverter::StringConverter(const StringConverter &other)
 {
 	*this = other;
 }
 
-Converter &Converter::operator=(const Converter &other)
+StringConverter &StringConverter::operator=(const StringConverter &other)
 {
 	if (this != &other)
 	{
@@ -28,7 +30,9 @@ Converter &Converter::operator=(const Converter &other)
 	}
 	return *this;
 }
-void Converter::printType()
+
+
+void StringConverter::printType()
 {
 	if (_type == Char)
 	{
@@ -48,7 +52,7 @@ void Converter::printType()
 	}
 }
 
-Type Converter::detectType()
+Type StringConverter::detectType()
 {
 	if (_org.empty())
 		return Impossible;
@@ -64,7 +68,7 @@ Type Converter::detectType()
 	return Impossible;
 }
 
-bool Converter::isChar()
+bool StringConverter::isChar()
 {
 	if (_org.length() != 1)
 		return false;
@@ -75,7 +79,7 @@ bool Converter::isChar()
 	return true;
 }
 
-bool Converter::isInt()
+bool StringConverter::isInt()
 {
 	long v;
 	char *endptr;
@@ -91,7 +95,7 @@ bool Converter::isInt()
 	 return true;
 }
 
-bool Converter::isFloat()
+bool StringConverter::isFloat()
 {
 	float v;
 	char *endptr;
@@ -113,7 +117,7 @@ bool Converter::isFloat()
 	return true;
 }
 
-bool Converter::isDouble()
+bool StringConverter::isDouble()
 {
 	double v;
 	char *endptr;
@@ -133,17 +137,17 @@ bool Converter::isDouble()
 	return true;
 }
 
-void Converter::setOrg(std::string &org)
+void StringConverter::setOrg(std::string &org)
 {
 	_org = org;
 }
 
-Type Converter::getType() const
+Type StringConverter::getType() const
 {
 	return _type;
 }
 
-void Converter::setType(const Type &type)
+void StringConverter::setType(const Type &type)
 {
 	_type = type;
 }

@@ -13,7 +13,7 @@ enum Type {
 	Impossible
 };
 
-class Converter
+class StringConverter
 {
 private:
 	std::string _org;
@@ -27,16 +27,17 @@ private:
 	bool isFloat();
 	bool isDouble();
 public:
-	Converter();
-	Converter(std::string argv);
-	~Converter();
-	Converter(const Converter &other);
+	StringConverter();
+	StringConverter(std::string argv);
+	~StringConverter();
+	StringConverter(const StringConverter &other);
 	void printType();
 	Type detectType();
 	Type getType() const;
 	void setType(const Type &type);
 	void setOrg(std::string &org);
-	Converter &operator=(const Converter &other);
+	void convert();
+	StringConverter &operator=(const StringConverter &other);
 };
 
 #endif

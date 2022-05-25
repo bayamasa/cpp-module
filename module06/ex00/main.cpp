@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Converter.hpp"
+#include "StringConverter.hpp"
 
 void detectTypeTest(char *str, Type expect)
 {
-	Converter con(str);
+	StringConverter con(str);
 	con.detectType();
 	if (expect == con.getType())
 	{
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 		exit(1);
 	}
 	std::cout << argv[1] << ": ";
-	Converter con(argv[1]);
+	StringConverter con(argv[1]);
 	con.setType(con.detectType());
 	con.printType();
 	return 0;

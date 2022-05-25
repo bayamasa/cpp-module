@@ -6,11 +6,11 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 18:47:47 by mhirabay          #+#    #+#              #
-#    Updated: 2022/05/25 21:03:01 by mhirabay         ###   ########.fr        #
+#    Updated: 2022/05/25 22:24:55 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Converter.cpp
+SRCS			= main.cpp StringConverter.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= c++
