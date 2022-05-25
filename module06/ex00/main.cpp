@@ -1,5 +1,5 @@
-// #include <iostream>
-// #include "Converter.hpp"
+#include <iostream>
+#include "Converter.hpp"
 
 // bool isdigit(char c)
 // {
@@ -54,13 +54,12 @@
 	
 // }
 
-// int main(int argc, char const *argv[])
-// {
-// 	if (argc != 2)
-// 	{
-// 		std::cerr << "Invalid argument" << std::endl;
-// 		exit(1);
-// 	}
-// 	interpret(argv[1]);
-// 	return 0;
-// }
+int main(int argc, char const *argv[])
+{
+	// if (argc != 2)
+	// {
+	// 	std::cerr << "Invalid argument" << std::endl;
+	// 	exit(1);
+	Converter con(argv[1]);
+	return 0;
+}

@@ -3,26 +3,37 @@
 
 #include <iostream>
 #include <string>
-#include <sstream>
+#include <limits>
+
+enum Type {
+	Char,
+	Int,
+	Float,
+	Double,
+	Impossible
+};
 
 class Converter
 {
 private:
-	std::string argv;
-	char _c;
-	int _i;
-	float _f;
-	double _d;
+	std::string org;
+	Type type;
+	char c;
+	int i;
+	float f;
+	double d;
+	bool isChar();
+	bool isInt();
+	bool isFloat();
+	bool isDouble();
 public:
 	Converter();
-	Converter(char value);
-	Converter(int value);
-	Converter(float value);
-	Converter(double value);
-	
+	Converter(std::string argv);
 	~Converter();
 	Converter(const Converter &other);
-	void interpret(char const *argv);
+	void printType();
+	void detectType();
+	void setOrg(std::string &org);
 	Converter &operator=(const Converter &other);
 };
 
