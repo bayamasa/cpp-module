@@ -16,12 +16,12 @@ enum Type {
 class Converter
 {
 private:
-	std::string org;
+	std::string _org;
 	Type type;
-	char c;
-	int i;
-	float f;
-	double d;
+	char _c;
+	int _i;
+	float _f;
+	double _d;
 	bool isChar();
 	bool isInt();
 	bool isFloat();
@@ -33,6 +33,7 @@ public:
 	Converter(const Converter &other);
 	void printType();
 	void detectType();
+	Type getType() const;
 	void setOrg(std::string &org);
 	Converter &operator=(const Converter &other);
 };

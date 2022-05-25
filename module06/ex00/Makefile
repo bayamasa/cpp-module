@@ -6,7 +6,7 @@
 #    By: mhirabay <mhirabay@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 18:47:47 by mhirabay          #+#    #+#              #
-#    Updated: 2022/05/25 17:27:12 by mhirabay         ###   ########.fr        #
+#    Updated: 2022/05/25 21:03:01 by mhirabay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CXX				= c++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98 -pedantic -Wshadow
 
-NAME			= coverter
+NAME			= convert
 
 all:			$(NAME)
 
