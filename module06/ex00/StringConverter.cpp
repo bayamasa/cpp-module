@@ -340,7 +340,7 @@ void StringConverter::setStringsFromFloat()
 
 void StringConverter::setCharStr()
 {
-	if ((_c_value >= 0 && _c_value <= 31) || _c_value == 127)
+	if ((_d_value >= 0 && _d_value <= 31) || _d_value == 127)
 		charStr = "Non displayable";
 	else if (std::isprint(_d_value))
 	{
