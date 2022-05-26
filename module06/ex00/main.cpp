@@ -1,18 +1,6 @@
 #include <iostream>
 #include "StringConverter.hpp"
 
-void detectTypeTest(char *str, Type expect)
-{
-	StringConverter con(str);
-	con.detectType();
-	if (expect == con.getType())
-	{
-		std::cout << "Test Pass: " << str << std::endl;
-	}
-	else
-		std::cout << "Test Fail: " << str << std::endl;
-}
-
 int main(int argc, char const *argv[])
 {
 	if (argc != 2)
@@ -20,9 +8,12 @@ int main(int argc, char const *argv[])
 		std::cerr << "Invalid argument" << std::endl;
 		exit(1);
 	}
-	std::cout << argv[1] << ": ";
+	try {
+	std::cout << argv[1] << std::endl;
 	StringConverter con(argv[1]);
-	con.setType(con.detectType());
-	con.printType();
+	con.printAllStrings();
+	} catch (std::exception const &e) {
+		std::cout << e.what() << std::endl;
+	}	
 	return 0;
 }
