@@ -33,6 +33,8 @@ StringConverter &StringConverter::operator=(const StringConverter &other)
 	if (this != &other)
 	{
 		_org = other._org;
+		setType(detectType());
+		convert();
 	}
 	return *this;
 }
