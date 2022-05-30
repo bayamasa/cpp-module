@@ -19,6 +19,7 @@ public:
 	Span(const Span &other);
 	Span &operator=(const Span &other);
 	void addNumber(int number);
+	void addNumbers(std::vector<int> nums);
 	unsigned int shortestSpan() const;
 	unsigned int longestSpan() const;
 	class OverCapacityException : public std::exception {

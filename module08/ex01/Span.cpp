@@ -39,13 +39,22 @@ void Span::addNumber(int number)
 	numbers.push_back(number);
 }
 
+void Span::addNumbers(std::vector<int> nums)
+{
+	if (nums.size() > numbers.capacity() - numbers.size())
+		throw OverCapacityException();
+	for (std::vector<int>::iterator it = nums.begin(), e = nums.end(); it != e; ++it) {
+		numbers.push_back(*it);
+	}
+}
+
 unsigned int Span::shortestSpan() const {
 	if (numbers.size() == 0 || numbers.size() == 1)
 		throw NotEnoughSizeException();
 	std::vector<int> _tmp(numbers);
 	std::sort(_tmp.begin(), _tmp.end());
 	unsigned int min_span = std::numeric_limits<unsigned int>::max();
-	for (std::vector<int>::iterator it = _tmp.begin() + 1, e = _tmp.end(); it != e; ++it) {
+	for (std::vector<int>::iterator it = _tmp.begin() + 1, e = _tmp.end(); it != e; it++) {
 		unsigned _span = *(it) - *(it - 1);
   		if (min_span > _span)
 		{
