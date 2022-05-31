@@ -1,7 +1,7 @@
 #include <stack>
 #include <iostream>
 #include "MutantStack.hpp"
-
+#include <list>
 
 void subjectTest()
 {
@@ -30,7 +30,19 @@ void subjectTest()
 
 int main()
 {
-	subjectTest();
-	
+	// subjectTest();
+	MutantStack<int> m;
+ 	std::list<int> l;
+	for (int i = 0; i < 20; i++)
+	{
+		m.push(i);
+		l.push_back(i);
+	}
+	MutantStack<int>::iterator it = m.begin();
+	std::list<int>::iterator it2 = l.begin();
+	for (; it != m.end();)
+	{
+		std::cout << *it++ << " " << *it2++ << std::endl;
+	}
 	return 0;
 }
